@@ -1846,11 +1846,11 @@
 	
 }
 
+.team-caption p {
+	display: none;
+}
 @media only screen and (max-width: 767px) {
-	
-	.team-caption p {
-		display: none;
-	}
+
 	.content-slider .swiper-pagination-bullets, .content-carousel .swiper-pagination-bullets, .content-looped-carousel .swiper-pagination-bullets {
 		bottom: 40px !important;
 		margin: 0 !important;
