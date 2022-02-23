@@ -48,7 +48,7 @@ function resetMaterials(model) {
 }
 
 // Wait for both assets to load to hide the loading text and initialize controls
-Promise.all([loader.loadAsync("./assets/model6.glb")])
+Promise.all([loader.loadAsync("../assets/model3.glb")])
   .then((assets) => {
     const [model] = assets;
     resetMaterials(model);

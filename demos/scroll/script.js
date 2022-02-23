@@ -14,7 +14,7 @@ import {
   ScrollControls,
   ThreeDOFControls,
 } from "three-story-controls";
-import cameraData from "./camera-data.js";
+import cameraData from "./camera-data1.js";
 
 const canvasParent = document.querySelector(".canvas-parent");
 const scrollElement = document.querySelector(".scroller");
@@ -93,10 +93,11 @@ function resetMaterials(model) {
 }
 
 // Wait for both assets to load to hide the loading text and initialize controls
-Promise.all([loader.loadAsync("../assets/model1.glb")])
+Promise.all([loader.loadAsync("../assets/model3.glb")])
   .then((assets) => {
     const [model] = assets;
     resetMaterials(model);
+    model.scene.position.set(0, -10, 0)
     scene.add(model.scene);
     loading.style.display = "none";
   })
