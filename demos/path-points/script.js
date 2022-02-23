@@ -16,7 +16,7 @@ import {
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 import { CameraRig, PathPointsControls, ThreeDOFControls } from 'three-story-controls'
-import cameraData from './camera-data.js'
+import cameraData from './camera-data1.js'
 
 const canvasParent = document.querySelector('.canvas-parent')
 const caption = document.querySelector('.caption p')
@@ -50,10 +50,11 @@ function resetMaterials(model) {
 }
 
 // Wait for both assets to load to hide the loading text and initialize controls
-Promise.all([loader.loadAsync("../assets/model1.glb")])
+Promise.all([loader.loadAsync("../assets/model3.glb")])
   .then((assets) => {
     const [model] = assets;
     resetMaterials(model);
+    model.scene.position.set(0, -10, 0)
     scene.add(model.scene);
     loading.style.display = "none";
   })
@@ -63,7 +64,7 @@ Promise.all([loader.loadAsync("../assets/model1.glb")])
 const pois = cameraData.pois.map((item, index) => {
   return {
     frame: index * 10,
-    caption: `This is caption for point #${index + 1}`,
+    caption: ``,
   }
 })
 
