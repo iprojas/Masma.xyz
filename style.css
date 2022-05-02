@@ -586,8 +586,8 @@ Primary use:	Showcase Portfolio
 	}
 	
 	h1.big-title{
-		font-size:100px;
-		line-height: 130px;
+		font-size: 5em;
+		line-height: 1.2;
 		font-weight:500;
 		margin-left:-4px;
 	}

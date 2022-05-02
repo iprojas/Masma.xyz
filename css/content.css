@@ -146,8 +146,8 @@
 	}
 	
 	.hero-title, .next-hero-title, .next-temp-hero-title {
-		font-size:100px;
-		line-height:130px;
+		font-size: 5em;
+		line-height: 1.2;
 		font-weight:500;
 		font-family: 'Poppins', sans-serif;
 		position: relative;
