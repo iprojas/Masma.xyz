@@ -1,29 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<html>
     <script src="aframe.min.js"></script>
     <script src="aframe-ar.js"></script>
-    <style>
-        body {
-            height: 100vh;
-            padding: 0;
-        }
-    </style>
-
-</head>
-
-<body>
-    <a-scene embedded arjs>
-        <a-marker preset="kanji">
-            <a-entity position="0 -1 0" scale="0.05 0.05 0.05" gltf-model="v1.gltf"></a-entity>
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs>
+        <a-marker preset="hiro">
+            <a-entity
+            position="0 0 0"
+            rotation="0 0 0"
+            scale="0.05 0.05 0.05"
+            gltf-model="v1.gltf"
+            ></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
-    </a-scene>
-</body>
-
+        </a-scene>
+    </body>
 </html>
